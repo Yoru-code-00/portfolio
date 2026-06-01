@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YORU Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500;700;900&family=Righteous&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="icon" href="images/Favicom.svg">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <nav class="header__nav" aria-label="メインナビゲーション">
+        <a href="#profile" class="header__link">PROFILE</a>
+        <a href="#skill" class="header__link">SKILL</a>
+
+        <h1 class="header__logo">
+          <a href="#">
+            <img src="./images/logo.svg" alt="YORU">
+          </a>
+        </h1>
+
+        <a href="#works" class="header__link">WORKS</a>
+        <a href="#contact" class="header__link">CONTACT</a>
+      </nav>
+    </div>
+
+    <button class="header__menu" type="button" aria-label="メニューを開く" aria-controls="global-menu" aria-expanded="false">
+      <svg class="header__menu-icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
+        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="header__menu-path"
+          d="M30 0C39.8618 0 48.6115 4.75888 54.0796 12.1051C54.9993 13.3408 54.0582 15 52.5178 15H42.3489C41.9038 15 41.4736 14.8486 41.1127 14.5879C37.9878 12.3307 34.1495 11 30 11C19.5066 11 11 19.5066 11 30C11 40.4934 19.5066 49 30 49C34.1495 49 37.9878 47.6693 41.1127 45.4121C41.4736 45.1514 41.9038 45 42.3489 45H52.5178C54.0582 45 54.9993 46.6592 54.0796 47.8949C48.6115 55.2411 39.8618 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0ZM57.6422 33C58.8249 33 59.7549 34.0225 59.5517 35.1876C59.3457 36.3689 59.0705 37.5264 58.7306 38.6559C58.4863 39.4675 57.7243 40 56.8767 40H49.7511C48.1834 40 47.1915 38.2494 47.7516 36.7851C48.0141 36.0991 48.2379 35.3939 48.4204 34.6723C48.6615 33.7188 49.4878 33 50.4714 33H57.6422ZM56.8767 20C57.7243 20 58.4863 20.5325 58.7304 21.3442C59.1714 22.8104 59.503 24.3239 59.7162 25.8753C59.8735 27.0208 58.9519 28 57.7957 28H50.6972C49.6732 28 48.8261 27.2233 48.6233 26.2196C48.4144 25.185 48.1214 24.181 47.7517 23.2148C47.1915 21.7505 48.1834 20 49.7511 20H56.8767Z" />
+      </svg>
+    </button>
+
+    <div class="menu-overlay" aria-hidden="true"></div>
+
+    <nav class="global-menu" id="global-menu" aria-label="グローバルメニュー" aria-hidden="true">
+      <div class="global-menu__inner">
+        <p class="global-menu__label">MENU</p>
+
+        <ul class="global-menu__list">
+          <li class="global-menu__item">
+            <a href="#profile" class="global-menu__link">Profile</a>
+          </li>
+          <li class="global-menu__item">
+            <a href="#skill" class="global-menu__link">Skill</a>
+          </li>
+          <li class="global-menu__item">
+            <a href="#works" class="global-menu__link">Works</a>
+          </li>
+          <li class="global-menu__item">
+            <a href="#contact" class="global-menu__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="fv">
+      <div class="fv__inner">
+        <div class="fv__copy-wrap">
+          <p class="fv__copy">Make Ideals Real</p>
+          <p class="fv__sub">理想を現実にする</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="profile section menu-color-dark">
+      <div class="section-title js-reveal reveal-up">
+        <span class="section-title__line"></span>
+        <h2 class="section-title__text">PROFILE</h2>
+        <span class="section-title__line"></span>
+      </div>
+
+      <div class="profile__inner inner">
+        <div class="profile__content">
+
+          <div class="profile__row profile__row--top">
+            <div class="profile__info card js-reveal reveal-up">
+              <dl>
+                <div>
+                  <dt>名前</dt>
+                  <dd>Yoru</dd>
+                </div>
+                <div>
+                  <dt>出身</dt>
+                  <dd>宮崎</dd>
+                </div>
+                <div>
+                  <dt>職業</dt>
+                  <dd>Webデザイナー / Webプログラマー</dd>
+                </div>
+                <div>
+                  <dt>趣味</dt>
+                  <dd>散歩 / 読書</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="profile__gauge loading-panel js-reveal reveal-up" aria-label="ローディングテキストアニメーション">
+              <p class="animation-text-cover">LOADING</p>
+              <p class="animation-text-glitch" data-text="LOADING">LOADING</p>
+              <p class="animation-text-lock" aria-label="LOADING"><span class="lock-letter" style="--i: 1;"
+                  data-current="L">L</span><span class="lock-letter" style="--i: 2;" data-current="O">O</span><span
+                  class="lock-letter" style="--i: 3;" data-current="A">A</span><span class="lock-letter" style="--i: 4;"
+                  data-current="D">D</span><span class="lock-letter" style="--i: 5;" data-current="I">I</span><span
+                  class="lock-letter" style="--i: 6;" data-current="N">N</span><span class="lock-letter" style="--i: 7;"
+                  data-current="G">G</span></p>
+            </div>
+          </div>
+
+          <div class="profile__row profile__row--bottom">
+            <div class="profile__counter profile-slot js-reveal reveal-up" id="profileSlot"
+              aria-label="ジャグラー風スロットアニメーション">
+              <h3 class="profile-slot__title">LUCKY SLOT</h3>
+
+              <div class="profile-slot__reels">
+                <div class="profile-slot__reel" data-profile-reel="0">
+                  <div class="profile-slot__window">
+                    <div class="profile-slot__track">
+                      <div class="profile-slot__symbol">🍒</div>
+                      <div class="profile-slot__symbol">🔔</div>
+                      <div class="profile-slot__symbol">🍇</div>
+                      <div class="profile-slot__symbol">7️⃣</div>
+                      <div class="profile-slot__symbol">⭐</div>
+                    </div>
+                  </div>
+                  <button class="profile-slot__stop" type="button" disabled>STOP</button>
+                </div>
+
+                <div class="profile-slot__reel" data-profile-reel="1">
+                  <div class="profile-slot__window">
+                    <div class="profile-slot__track">
+                      <div class="profile-slot__symbol">🔔</div>
+                      <div class="profile-slot__symbol">🍇</div>
+                      <div class="profile-slot__symbol">⭐</div>
+                      <div class="profile-slot__symbol">🍒</div>
+                      <div class="profile-slot__symbol">7️⃣</div>
+                    </div>
+                  </div>
+                  <button class="profile-slot__stop" type="button" disabled>STOP</button>
+                </div>
+
+                <div class="profile-slot__reel" data-profile-reel="2">
+                  <div class="profile-slot__window">
+                    <div class="profile-slot__track">
+                      <div class="profile-slot__symbol">🍇</div>
+                      <div class="profile-slot__symbol">⭐</div>
+                      <div class="profile-slot__symbol">7️⃣</div>
+                      <div class="profile-slot__symbol">🔔</div>
+                      <div class="profile-slot__symbol">🍒</div>
+                    </div>
+                  </div>
+                  <button class="profile-slot__stop" type="button" disabled>STOP</button>
+                </div>
+              </div>
+
+              <div class="profile-slot__panel">
+                <p class="profile-slot__message" id="profileSlotMessage">STARTを押してルーレット開始</p>
+                <button class="profile-slot__start" id="profileSlotStart" type="button">START</button>
+              </div>
+            </div>
+
+            <div class="profile__text card js-reveal reveal-up">
+              <p>
+                当サイトをご覧いただきありがとうございます。<br>
+                Yoru(よる)と申します。<br>
+                「誰よりも自由に、そして楽しく」という想いを胸に、活動しております。<br>
+                お客様とのこまめな連絡・確認・コミュニケーションを大切にしながら、世界に1つだけのWebサイトをお作りします。<br>
+                少しでも気になっていただけましたら、お気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skill" class="skill section menu-color-dark">
+      <div class="section-title js-reveal reveal-up">
+        <span class="section-title__line"></span>
+        <h2 class="section-title__text">SKILL</h2>
+        <span class="section-title__line"></span>
+      </div>
+
+      <div class="skill__inner">
+        <div class="skill__list">
+          <div class="skill__item skill__item--left js-reveal reveal-slide-left">
+            <p>
+              <span class="skill__text">HTML / CSS , Sass , SCSS / JavaScript</span>
+            </p>
+            <div class="skill__icon">
+              <img src="images/html-log.svg" alt="HTML" loading="lazy">
+            </div>
+          </div>
+
+          <div class="skill__item skill__item--right js-reveal reveal-slide-right">
+            <div class="skill__icon">
+              <img src="images/wordpress-logo.svg" alt="WordPress" loading="lazy">
+            </div>
+            <p>
+              <span class="skill__text">WordPress</span>
+            </p>
+          </div>
+
+          <div class="skill__item skill__item--left js-reveal reveal-slide-left">
+            <p>
+              <span class="skill__text">Figma / Canva</span>
+            </p>
+            <div class="skill__icon">
+              <img src="images/figma-logo.svg" alt="Figma" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="works section menu-color-dark">
+      <div class="section-title js-reveal reveal-up">
+        <span class="section-title__line"></span>
+        <h2 class="section-title__text">WORKS</h2>
+        <span class="section-title__line"></span>
+      </div>
+
+      <div class="works__inner inner">
+        <div class="works__grid">
+          <article class="works__card js-reveal reveal-up">
+            <a href="https://www.keikensetu.jp/about/" class="works__link" target="_blank" rel="noopener noreferrer">
+              <div class="works__thumb">
+                <img src="images/work-1.png" alt="株式会社ケイ建設 Aboutのスクリーンショット" loading="lazy">
+              </div>
+              <div class="works__body">
+                <h3 class="works__title">株式会社ケイ建設 About</h3>
+                <p class="works__category">コーディング</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="works__card js-reveal reveal-up">
+            <a href="https://www.keikensetu.jp/recruit/" class="works__link" target="_blank" rel="noopener noreferrer">
+              <div class="works__thumb">
+                <img src="images/work-1.png" alt="株式会社ケイ建設 Recruitのスクリーンショット" loading="lazy">
+              </div>
+              <div class="works__body">
+                <h3 class="works__title">株式会社ケイ建設 Recruit</h3>
+                <p class="works__category">コーディング</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="works__card js-reveal reveal-up">
+            <a href="https://yoru-code-00.github.io/yoru.demosite-1/" class="works__link" target="_blank"
+              rel="noopener noreferrer">
+              <div class="works__thumb">
+                <img src="images/demo-1.png" alt="Demoサイト" loading="lazy">
+              </div>
+              <div class="works__body">
+                <h3 class="works__title">Demoサイト</h3>
+                <p class="works__category">デザイン / コーディング</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section menu-color-dark">
+      <div class="contact__frame">
+        <span class="contact__corner contact__corner--top-left" aria-hidden="true"></span>
+        <span class="contact__corner contact__corner--top-right" aria-hidden="true"></span>
+
+        <a href="https://forms.gle/CBxJRX5wWq42Bcr66" class="contact__button" aria-label="Contact" target="_blank"
+          rel="noopener noreferrer">
+          <img src="./images/Contact-btn.svg" alt="Contact" loading="lazy">
+        </a>
+
+        <span class="contact__corner contact__corner--bottom-left" aria-hidden="true"></span>
+        <span class="contact__corner contact__corner--bottom-right" aria-hidden="true"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <img src="./images/logo.svg" alt="YORU" class="footer__logo">
+
+      <div class="footer__line"></div>
+
+      <div class="footer__message">
+        <p class="footer__copy">Make Ideals Real</p>
+        <p class="footer__sub">理想を現実にする</p>
+      </div>
+    </div>
+
+    <small>© 2026 Yoru</small>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/*
+  animation.css
+  ------------------------------------------------------------
+  このCSSは、スクロール時に表示されるアニメーションを管理する専用ファイル。
+
+  使い方：
+  HTML側で対象要素に以下のようなクラスを付ける。
+
+  下からふわっと表示：
+  class="js-reveal reveal-up"
+
+  左からスライドイン：
+  class="js-reveal reveal-slide-left"
+
+  右からスライドイン：
+  class="js-reveal reveal-slide-right"
+
+  JS側で .is-show が付いたタイミングで、アニメーションが発火する。
+
+  管理方針：
+  - js-reveal：アニメーション対象であることを示す共通クラス
+  - reveal-up / reveal-slide-left / reveal-slide-right：動きの種類
+  - is-show：表示状態。JSが付与する
+*/
+
+/* =========================
+  Reveal Base
+========================= */
+
+.js-reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* 下からふわっと出る */
+.reveal-up {
+  transform: translateY(48px);
+}
+
+/* 左からスライドイン */
+.reveal-slide-left {
+  transform: translateX(-72px);
+}
+
+/* 右からスライドイン */
+.reveal-slide-right {
+  transform: translateX(72px);
+}
+
+/* 表示された状態 */
+.js-reveal.is-show {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================
+  Optional Delay
+  ------------------------------------------------------------
+  必要になったらHTML側で style="--reveal-delay: 0.15s;" のように指定できる。
+========================= */
+
+.js-reveal {
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+/* =========================
+  Works Stagger
+  ------------------------------------------------------------
+  Worksカードは同じタイミングで全部出ると少し硬いので、
+  CSSだけで軽く順番に表示する。
+========================= */
+
+.works__card.js-reveal:nth-child(1) {
+  --reveal-delay: 0s;
+}
+
+.works__card.js-reveal:nth-child(2) {
+  --reveal-delay: 0.08s;
+}
+
+.works__card.js-reveal:nth-child(3) {
+  --reveal-delay: 0.16s;
+}
+
+.works__card.js-reveal:nth-child(4) {
+  --reveal-delay: 0.24s;
+}
+
+/* =========================
+  Reduced Motion
+  ------------------------------------------------------------
+  OS側で「視差効果を減らす」がONの場合は、アニメーションを無効化。
+  アクセシビリティ対策。
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
