@@ -6,8 +6,9 @@ const darkSections = document.querySelectorAll(".menu-color-dark");
 
 if (menuButton && globalMenu && menuOverlay) {
   const firstMenuLink = menuLinks[0];
+  let focusTimeoutId = null;
 
-  const setMenuState = (isOpen) => {
+  const setMenuState = (isOpen, restoreFocus = true) => {
     menuButton.classList.toggle("is-open", isOpen);
     globalMenu.classList.toggle("is-open", isOpen);
     menuOverlay.classList.toggle("is-open", isOpen);
@@ -18,11 +19,14 @@ if (menuButton && globalMenu && menuOverlay) {
     globalMenu.setAttribute("aria-hidden", String(!isOpen));
 
     if (isOpen) {
-      setTimeout(() => {
+      focusTimeoutId = setTimeout(() => {
         firstMenuLink?.focus();
       }, 120);
     } else {
-      menuButton.focus();
+      clearTimeout(focusTimeoutId);
+      if (restoreFocus) {
+        menuButton.focus();
+      }
     }
   };
 
@@ -49,7 +53,7 @@ if (menuButton && globalMenu && menuOverlay) {
 
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      setMenuState(false);
+      setMenuState(false, false);
     });
   });
 
