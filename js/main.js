@@ -151,7 +151,7 @@ const stopProfileSlotReel = (reel) => {
   reel.classList.add("is-stopping");
   profileSlotStoppedCount += 1;
 
-  if (profileSlotStoppedCount === profileSlotReels.length) {
+  if (profileSlotStoppedCount >= profileSlotReels.length) {
     isProfileSlotPlaying = false;
     profileSlotMessage.textContent = "もう一度遊ぶならSTART";
 
